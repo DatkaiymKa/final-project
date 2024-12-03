@@ -1,0 +1,128 @@
+import random
+
+def scout_robot_interaction():
+    # Names and responses for variation
+    robot_names = ["Scout-B1", "Recon-X9", "Surveyor-D3"]
+    hints = [
+        "The signal seems to originate from the northern mountains.",
+        "Energy readings indicate unusual fluctuations near the ruins.",
+        "I detected movement on the western ridge."
+    ]
+
+    # Select a random robot name and hint
+    robot_name = random.choice(robot_names)
+    hint = random.choice(hints)
+
+    # Display encounter and options
+    print(f"{robot_name} beeps as it approaches you.")
+    print(f"{robot_name}: \"Greetings, explorer. I may have information for you.\"")
+    
+    # Choices for the player
+    options = ["1. Ask about the signal origin", "2. Inquire about local dangers", "3. Continue exploring"]
+    print("Choose your action:")
+    for option in options:
+        print(option)
+
+    # Handle player input and response
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        print(f"{robot_name}: \"{hint}\"")
+    elif choice == "2":
+        print(f"{robot_name}: \"Beware of the creatures that roam the eastern valley at night.\"")
+    elif choice == "3":
+        print("You nod and continue exploring the area.")
+    else:
+        print(f"{robot_name}: \"Error... Invalid response detected.\"")
+
+
+
+
+def alien_language_puzzle():
+    print("You encounter an alien who seems eager to communicate.")
+    print("The alien gestures to a screen displaying three symbols: ☼, ☾, and ✦.")
+    print("Choose the symbol that matches the alien’s greeting.")
+
+    # Define correct choice
+    correct_symbol = "☼"
+    player_choice = input("Enter your choice (☼, ☾, ✦): ")
+
+    # Evaluate the player's choice
+    if player_choice == correct_symbol:
+        print("The alien nods approvingly. You successfully communicate!")
+        # Possible transition to another scene or dialogue
+    else:
+        print("The alien looks confused and withdraws.")
+        # Optionally retry or branch to a different scenario
+
+
+
+
+def code_breaking_challenge():
+    print("You find a panel with symbols that seems to control the door to the hidden chamber.")
+    print("The panel hints at a sequence: 3-1-4")
+
+    # Code combination for the challenge
+    correct_code = "314"
+    player_input = input("Enter the three-digit code: ")
+
+    if player_input == correct_code:
+        print("The door opens, revealing the ancient chamber!")
+        # Transition to the next scene or reward
+    else:
+        print("The panel beeps in error. The door remains closed.")
+        # Optionally retry or lead to another path
+
+
+
+
+def labyrinth_navigation():
+    print("You enter the labyrinth. The air is thick, and the paths twist in every direction.")
+    
+    # Choices for directions
+    directions = ["1. Move left", "2. Move right", "3. Go straight"]
+    print("Choose your direction:")
+    for direction in directions:
+        print(direction)
+
+    # Handle player input
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        print("You encounter a dead end and a trap springs! You narrowly escape.")
+        # Transition to retry or different consequence
+    elif choice == "2":
+        print("You find a clue etched into the wall. It points further into the labyrinth.")
+    elif choice == "3":
+        print("A hidden door opens, revealing a shortcut deeper into the labyrinth.")
+        # Possible shortcut or advantage in the story
+    else:
+        print("You hesitate and feel the walls closing in. Make a choice quickly!")
+
+
+
+
+def final_confrontation():
+    print("You stand before the source of the signal—a powerful AI entity that controls the planet.")
+    print("The entity speaks: 'Why have you come here?'")
+
+    # Final choices for the player
+    options = ["1. Seek to form an alliance", "2. Demand the AI to shut down", "3. Attempt to deactivate the AI forcefully"]
+    print("Choose your action:")
+    for option in options:
+        print(option)
+
+    # Handle player choice
+    choice = input("Enter the number of your choice: ")
+
+    if choice == "1":
+        print("The AI considers your offer and proposes a truce.")
+        # Possible peaceful ending or alliance
+    elif choice == "2":
+        print("The AI shuts down, leaving the planet silent.")
+        # Possible ending with the planet in stasis
+    elif choice == "3":
+        print("The AI resists, and a struggle ensues. You barely escape as the system collapses.")
+        # Possible dramatic escape ending
+    else:
+        print("The AI remains silent, waiting for your response.")
